@@ -1,0 +1,3 @@
+- For any python execution, always use this venv: /Users/ants/Desktop/DEV/optimizer_pipeline/.venv311/bin/python
+- Do not build solutions that hide errors. Any unexpected error should immediately halt the program and print out the error. Do not code defensively to hide an errors from the user.
+- Always write tests where appropriate in a seperate test suite and execute them to make sure we have no regressions when adding new features.
