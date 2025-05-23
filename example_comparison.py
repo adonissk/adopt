@@ -110,7 +110,7 @@ def run_optimization(model_type: str, df: pd.DataFrame, total_trials: int = 10):
 
 
 def main():
-    """Compare LightGBM and CatBoost performance on the same dataset."""
+    """Compare LightGBM, CatBoost, and Random Forest performance on the same dataset."""
     print("Creating sample dataset for comparison...")
     df = create_sample_dataset(n_samples=3000, n_features=12, n_folds=5)  # Smaller for comparison
     
@@ -120,7 +120,7 @@ def main():
     # Run optimizations for both models
     results = []
     
-    for model_type in ["lightgbm", "catboost"]:
+    for model_type in ["lightgbm", "catboost", "sklearn_random_forest"]:
         try:
             result = run_optimization(model_type, df, total_trials=8)  # Reduced trials for comparison
             results.append(result)
